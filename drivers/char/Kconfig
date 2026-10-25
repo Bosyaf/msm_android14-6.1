@@ -460,3 +460,4 @@ config RANDOM_TRUST_BOOTLOADER
 	  at boot time with "random.trust_bootloader=on/off".
 
 endmenu
+source "drivers/char/lrng/Kconfig"
