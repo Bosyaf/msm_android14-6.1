@@ -11,7 +11,6 @@
 #define pr_fmt(fmt) KBUILD_MODNAME ": " fmt
 
 #include <linux/kthread.h>
-#include <linux/cpufreq.h>
 #include <trace/events/power.h>
 
 #include "walt.h"
