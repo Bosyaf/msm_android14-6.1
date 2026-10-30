@@ -138,7 +138,7 @@ KCOV_INSTRUMENT_stackleak.o := n
 obj-$(CONFIG_SCF_TORTURE_TEST) += scftorture.o
 
 $(obj)/configs.o: $(obj)/config_data.gz
-
+obj-y += oplus_cpu/
 targets += config_data config_data.gz
 $(obj)/config_data.gz: $(obj)/config_data FORCE
 	$(call if_changed,gzip)
