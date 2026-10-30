@@ -337,7 +337,7 @@ static unsigned int get_next_freq(struct waltgov_policy *wg_policy,
 
 	final_freq = cpufreq_driver_resolve_freq(policy, freq);
 	unsigned int current_freq = policy->cur;
-	unsigned int max_freq = 2265600;
+	unsigned int max_freq = policy->max;
 	
 	if (current_freq >= max_freq)
 	{
