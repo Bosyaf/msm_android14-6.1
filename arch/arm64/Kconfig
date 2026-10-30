@@ -2408,6 +2408,8 @@ source "drivers/cpuidle/Kconfig"
 
 source "drivers/cpufreq/Kconfig"
 
+source "kernel/sched/walt/Kconfig"
+
 endmenu # "CPU Power Management"
 
 source "drivers/acpi/Kconfig"
