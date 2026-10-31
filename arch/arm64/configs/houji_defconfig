@@ -216,7 +216,6 @@ CONFIG_TIME_NS=y
 # CONFIG_PID_NS is not set
 CONFIG_SCHED_CASS=y
 CONFIG_NET_NS=y
-CONFIG_SCHED_BORE=y
 # CONFIG_CHECKPOINT_RESTORE is not set
 CONFIG_SCHED_BORE=y
 # CONFIG_SCHED_AUTOGROUP is not set
@@ -427,7 +426,7 @@ CONFIG_ARM64_PA_BITS=48
 # CONFIG_CPU_BIG_ENDIAN is not set
 CONFIG_CPU_LITTLE_ENDIAN=y
 CONFIG_SCHED_MC=y
-CONFIG_SCHED_CLUSTER=y
+# CONFIG_SCHED_CLUSTER is not set
 # CONFIG_SCHED_SMT is not set
 CONFIG_NR_CPUS=32
 CONFIG_HOTPLUG_CPU=y
@@ -7519,51 +7518,5 @@ CONFIG_KSU_SUSFS_SUS_MAP=y
 #
 # Rust hacking
 #
-# Linux Random Number Generator (LRNG) - Gaming & Battery Optimized
-# ============================================================
-CONFIG_RANDOM_DEFAULT_IMPL=y
+#
 CONFIG_LRNG=y
-CONFIG_LRNG_SHA256=y
-
-# ------------------------------------------------------------
-# LRNG Interfaces
-# ------------------------------------------------------------
-CONFIG_LRNG_DEV_IF=y
-CONFIG_LRNG_HWRAND_IF=y
-# CONFIG_LRNG_KCAPI_IF is not set
-
-# ------------------------------------------------------------
-# Entropy Sources (Pili Bitiren IRQ ve SCHED Kapatildi!)
-# Snapdragon Donanim RNG (HWRAND) + CPU Yeterlidir.
-# ------------------------------------------------------------
-CONFIG_LRNG_CPU=y
-CONFIG_LRNG_CPU_FULL_ENT_MULTIPLIER=1
-CONFIG_LRNG_CPU_ENTROPY_RATE=8
-# CONFIG_LRNG_SCHED is not set
-# CONFIG_LRNG_IRQ is not set
-# CONFIG_LRNG_JENT is not set
-# CONFIG_LRNG_KERNEL_RNG is not set
-
-# Timer Cutoff Ayarlari
-CONFIG_LRNG_RCT_CUTOFF=31
-CONFIG_LRNG_RCT_CUTOFF_PERMANENT=81
-CONFIG_LRNG_APT_CUTOFF=325
-CONFIG_LRNG_APT_CUTOFF_PERMANENT=371
-
-# ------------------------------------------------------------
-# DRNG & Algoritma Secimi (ChaCha20 + Hardware SIMD)
-# ------------------------------------------------------------
-CONFIG_LRNG_DRNG_CHACHA20=y
-CONFIG_LRNG_DFLT_DRNG_CHACHA20=y
-# CONFIG_LRNG_DFLT_DRNG_DRBG is not set
-# CONFIG_LRNG_DFLT_DRNG_KCAPI is not set
-
-# ------------------------------------------------------------
-# Gereksiz/Yuk Yapan Ozellikleri Kapatma
-# ------------------------------------------------------------
-# CONFIG_LRNG_AIS2031_NTG1_SEEDING_STRATEGY is not set
-# CONFIG_LRNG_RUNTIME_ES_CONFIG is not set
-# CONFIG_LRNG_SWITCH_HASH is not set
-# CONFIG_LRNG_SWITCH_DRNG is not set
-# CONFIG_LRNG_TESTING_MENU is not set
-# CONFIG_LRNG_SELFTEST is not set
